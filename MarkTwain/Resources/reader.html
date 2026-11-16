@@ -18,8 +18,9 @@
         pre { padding: 16px; overflow-x: auto; }
         pre code { padding: 0; background: none; font-size: inherit; }
         blockquote { margin-left: 0; padding-left: 1em; border-left: 4px solid #8886; opacity: .8; }
+        .table-wrapper { max-width: 100%; overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 6px 13px; border: 1px solid #8886; }
+        th, td { min-width: 6rem; padding: 6px 13px; border: 1px solid #8886; }
         tr:nth-child(even) { background: #8881; }
         input[type=checkbox] { margin-right: .5em; }
         hr { border: 0; border-top: 1px solid #8886; }
@@ -39,6 +40,12 @@
             FORBID_TAGS: ["style", "form", "button", "textarea", "select"],
             ADD_TAGS: ["input"],
             ALLOW_DATA_ATTR: false
+        });
+        document.querySelectorAll("table").forEach(table => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "table-wrapper";
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
         });
         document.querySelectorAll("input").forEach(input => {
             if (input.type !== "checkbox") {
