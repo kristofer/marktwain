@@ -32,8 +32,9 @@ copy never deletes the original file.
 
 The preview supports GitHub Flavored Markdown tables, task lists, strikethrough,
 autolinks, and fenced code blocks, plus light/dark appearance. Code blocks are
-not syntax-highlighted. Editing, PDF export, and relative/local image loading
-are not implemented. HTTPS images can load from the network; embedded
+not syntax-highlighted. Use **PRINT** in the document toolbar to open the
+system print panel and print or save a PDF. Editing and relative/local image
+loading are not implemented. HTTPS images can load from the network; embedded
 data images work offline. Tapped HTTP(S) and email links open outside the preview.
 
 ## Rendering and safety

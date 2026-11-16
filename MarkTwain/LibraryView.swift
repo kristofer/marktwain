@@ -1,5 +1,7 @@
 import SwiftData
 import SwiftUI
+import UIKit
+import WebKit
 
 struct LibraryView: View {
     @Environment(\.modelContext) private var modelContext
@@ -8,6 +10,7 @@ struct LibraryView: View {
     @State private var selection: UUID?
     @State private var showingImporter = false
     @State private var errorMessage: String?
+    @State private var previewWebView: WKWebView?
 
     var body: some View {
         NavigationSplitView {
@@ -43,9 +46,40 @@ struct LibraryView: View {
             }
         } detail: {
             if let document = documents.first(where: { $0.id == selection }) {
-                MarkdownWebView(markdown: document.markdown)
+                MarkdownWebView(markdown: document.markdown) { webView in
+                    previewWebView = webView
+                }
                     .navigationTitle(document.name)
                     .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button("PRINT", systemImage: "printer") {
+                                guard let previewWebView else { return }
+                                let printController = UIPrintInteractionController.shared
+                                let printInfo = UIPrintInfo(dictionary: nil)
+                                printInfo.jobName = document.name
+                                printInfo.outputType = .general
+                                printController.printInfo = printInfo
+                                printController.printFormatter = previewWebView.viewPrintFormatter()
+
+                                if UIDevice.current.userInterfaceIdiom == .pad {
+                                    printController.present(
+                                        from: CGRect(
+                                            x: previewWebView.bounds.maxX,
+                                            y: previewWebView.bounds.minY,
+                                            width: 0,
+                                            height: 0
+                                        ),
+                                        in: previewWebView,
+                                        animated: true
+                                    )
+                                } else {
+                                    printController.present(animated: true)
+                                }
+                            }
+                            .disabled(previewWebView == nil)
+                        }
+                    }
             } else {
                 ContentUnavailableView(
                     "Select a Document",
