@@ -3,12 +3,14 @@ import WebKit
 
 struct MarkdownWebView: UIViewRepresentable {
     let markdown: String
+    let onWebViewCreated: (WKWebView) -> Void
 
     func makeCoordinator() -> Coordinator {
         Coordinator()
     }
 
     func makeUIView(context: Context) -> WKWebView {
+        context.coordinator.onWebViewCreated = onWebViewCreated
         let configuration = WKWebViewConfiguration()
         configuration.websiteDataStore = .nonPersistent()
         let webView = WKWebView(frame: .zero, configuration: configuration)
@@ -16,10 +18,15 @@ struct MarkdownWebView: UIViewRepresentable {
         webView.isOpaque = false
         webView.backgroundColor = .systemBackground
         webView.scrollView.backgroundColor = .systemBackground
+        let coordinator = context.coordinator
+        DispatchQueue.main.async {
+            coordinator.onWebViewCreated?(webView)
+        }
         return webView
     }
 
     func updateUIView(_ webView: WKWebView, context: Context) {
+        context.coordinator.onWebViewCreated = onWebViewCreated
         guard context.coordinator.markdown != markdown else { return }
         context.coordinator.markdown = markdown
         do {
@@ -34,6 +41,7 @@ struct MarkdownWebView: UIViewRepresentable {
 
     final class Coordinator: NSObject, WKNavigationDelegate {
         var markdown: String?
+        var onWebViewCreated: ((WKWebView) -> Void)?
 
         func webView(
             _ webView: WKWebView,
