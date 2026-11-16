@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1286520B5886EC1959ACCCBC /* purify.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F6E181C9A81A875E9A0EC /* purify.js */; };
+		22BB48518D8C4ABCC9280007 /* marked.js in Resources */ = {isa = PBXBuildFile; fileRef = C9201F3D4B87125BE89E36FE /* marked.js */; };
+		23CAE86C10F72BAE8EE4A2F4 /* MarkdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CDFE89FB3966CA7E22745A /* MarkdownWebView.swift */; };
+		35E423DC022D5372F49CFA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588BCF334CA1B1D2E914A03B /* Foundation.framework */; };
+		39B92626A533DF6AB7886C81 /* reader.html in Resources */ = {isa = PBXBuildFile; fileRef = A755EBECBF90691A402D891A /* reader.html */; };
+		6A262376AAF2A8C626C696DF /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF162093B5A6F6E9BAF824A9 /* LibraryView.swift */; };
+		6D1C448B048E412B42FFE7DC /* MarkdownDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F712A0BC964F1ECBCBC6C /* MarkdownDocument.swift */; };
+		8F5B11E4275CF624FF365E93 /* MarkTwainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3AEFAE855295C433FB934 /* MarkTwainApp.swift */; };
+		BC322CC90A4103C85604B87D /* marked-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D80DAB1B84F9FC8C792A5F9 /* marked-LICENSE.txt */; };
+		D269CA8EB21029E36228AA7C /* DOMPurify-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7E0EF0E58C3A72C48355548 /* DOMPurify-LICENSE.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48CDFE89FB3966CA7E22745A /* MarkdownWebView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkdownWebView.swift; sourceTree = "<group>"; };
+		4B0F6E181C9A81A875E9A0EC /* purify.js */ = {isa = PBXFileReference; includeInIndex = 1; path = purify.js; sourceTree = "<group>"; };
+		588BCF334CA1B1D2E914A03B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70E3AEFAE855295C433FB934 /* MarkTwainApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkTwainApp.swift; sourceTree = "<group>"; };
+		8CB88ECE8036CD5712E5DA4E /* MarkTwain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkTwain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D80DAB1B84F9FC8C792A5F9 /* marked-LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "marked-LICENSE.txt"; sourceTree = "<group>"; };
+		9E5F712A0BC964F1ECBCBC6C /* MarkdownDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkdownDocument.swift; sourceTree = "<group>"; };
+		A755EBECBF90691A402D891A /* reader.html */ = {isa = PBXFileReference; includeInIndex = 1; path = reader.html; sourceTree = "<group>"; };
+		C7E0EF0E58C3A72C48355548 /* DOMPurify-LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "DOMPurify-LICENSE.txt"; sourceTree = "<group>"; };
+		C9201F3D4B87125BE89E36FE /* marked.js */ = {isa = PBXFileReference; includeInIndex = 1; path = marked.js; sourceTree = "<group>"; };
+		DF162093B5A6F6E9BAF824A9 /* LibraryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		F869554B594044AE535B4237 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B15C5FDB0DD12BCB77F68D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35E423DC022D5372F49CFA3C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15CF19BC1259F3A63B3D0B49 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7E0EF0E58C3A72C48355548 /* DOMPurify-LICENSE.txt */,
+				8D80DAB1B84F9FC8C792A5F9 /* marked-LICENSE.txt */,
+				C9201F3D4B87125BE89E36FE /* marked.js */,
+				4B0F6E181C9A81A875E9A0EC /* purify.js */,
+				A755EBECBF90691A402D891A /* reader.html */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2239A17A62BA7CE8FEECC969 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				588BCF334CA1B1D2E914A03B /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		348790C58E670CC3251E1032 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CB88ECE8036CD5712E5DA4E /* MarkTwain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6954426BE8921AFE35A93FEA /* MarkTwain */ = {
+			isa = PBXGroup;
+			children = (
+				DF162093B5A6F6E9BAF824A9 /* LibraryView.swift */,
+				70E3AEFAE855295C433FB934 /* MarkTwainApp.swift */,
+				9E5F712A0BC964F1ECBCBC6C /* MarkdownDocument.swift */,
+				48CDFE89FB3966CA7E22745A /* MarkdownWebView.swift */,
+				F869554B594044AE535B4237 /* Info.plist */,
+				15CF19BC1259F3A63B3D0B49 /* Resources */,
+			);
+			name = MarkTwain;
+			path = MarkTwain;
+			sourceTree = "<group>";
+		};
+		9D93FF17ADB8631AF5DF78DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2239A17A62BA7CE8FEECC969 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCEAD4A99BEC249A4C11698C = {
+			isa = PBXGroup;
+			children = (
+				348790C58E670CC3251E1032 /* Products */,
+				9D93FF17ADB8631AF5DF78DF /* Frameworks */,
+				6954426BE8921AFE35A93FEA /* MarkTwain */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6678C4C121B199030958176C /* MarkTwain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C555F782ACD938717ED0DB53 /* Build configuration list for PBXNativeTarget "MarkTwain" */;
+			buildPhases = (
+				3B340C14FE8C295575E0D23E /* Sources */,
+				3B15C5FDB0DD12BCB77F68D7 /* Frameworks */,
+				2903CCA7219B69B26D06530E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarkTwain;
+			productName = MarkTwain;
+			productReference = 8CB88ECE8036CD5712E5DA4E /* MarkTwain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A82B202094000C1C393C8A94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 26FBA9A6DF3E39CADEE59137 /* Build configuration list for PBXProject "MarkTwain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCEAD4A99BEC249A4C11698C;
+			minimizedProjectReferenceProxies = 0;
+			productRefGroup = 348790C58E670CC3251E1032 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6678C4C121B199030958176C /* MarkTwain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2903CCA7219B69B26D06530E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D269CA8EB21029E36228AA7C /* DOMPurify-LICENSE.txt in Resources */,
+				BC322CC90A4103C85604B87D /* marked-LICENSE.txt in Resources */,
+				22BB48518D8C4ABCC9280007 /* marked.js in Resources */,
+				1286520B5886EC1959ACCCBC /* purify.js in Resources */,
+				39B92626A533DF6AB7886C81 /* reader.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B340C14FE8C295575E0D23E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A262376AAF2A8C626C696DF /* LibraryView.swift in Sources */,
+				8F5B11E4275CF624FF365E93 /* MarkTwainApp.swift in Sources */,
+				6D1C448B048E412B42FFE7DC /* MarkdownDocument.swift in Sources */,
+				23CAE86C10F72BAE8EE4A2F4 /* MarkdownWebView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		37BFBD4F0DC4E4881DFEE9AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7DE043C6038B3DF13B9143AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A8A1BECD2CE52D5014434C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarkTwain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kristofer.marktwain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F11607794CD6AEAC01FE4881 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarkTwain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kristofer.marktwain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26FBA9A6DF3E39CADEE59137 /* Build configuration list for PBXProject "MarkTwain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37BFBD4F0DC4E4881DFEE9AA /* Debug */,
+				7DE043C6038B3DF13B9143AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C555F782ACD938717ED0DB53 /* Build configuration list for PBXNativeTarget "MarkTwain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8A1BECD2CE52D5014434C1B /* Release */,
+				F11607794CD6AEAC01FE4881 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A82B202094000C1C393C8A94 /* Project object */;
+}

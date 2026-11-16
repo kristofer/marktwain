@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-__NONCE__'; style-src 'unsafe-inline'; img-src data: https:; base-uri 'none'; form-action 'none'">
+    <title>Markdown Preview</title>
+    <style>
+        :root { color-scheme: light dark; font: -apple-system-body; }
+        body { margin: 0 auto; padding: 24px; max-width: 880px; line-height: 1.6; overflow-wrap: anywhere; }
+        h1, h2 { border-bottom: 1px solid #8885; padding-bottom: .3em; }
+        h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin-top: 1.5em; }
+        a { color: #0969da; }
+        @media (prefers-color-scheme: dark) { a { color: #58a6ff; } }
+        img { max-width: 100%; height: auto; }
+        pre, code { font-family: ui-monospace, Menlo, monospace; font-size: .9em; background: #8882; border-radius: 6px; }
+        code { padding: .15em .35em; }
+        pre { padding: 16px; overflow-x: auto; }
+        pre code { padding: 0; background: none; font-size: inherit; }
+        blockquote { margin-left: 0; padding-left: 1em; border-left: 4px solid #8886; opacity: .8; }
+        table { display: block; overflow-x: auto; border-collapse: collapse; }
+        th, td { padding: 6px 13px; border: 1px solid #8886; }
+        tr:nth-child(even) { background: #8881; }
+        input[type=checkbox] { margin-right: .5em; }
+        hr { border: 0; border-top: 1px solid #8886; }
+        @media (max-width: 480px) { body { padding: 16px; } }
+    </style>
+</head>
+<body>
+    <main id="content" aria-label="Markdown document"></main>
+    <script nonce="__NONCE__">__MARKED__</script>
+    <script nonce="__NONCE__">__PURIFY__</script>
+    <script nonce="__NONCE__">
+        const bytes = Uint8Array.from(atob("__MARKDOWN_BASE64__"), c => c.charCodeAt(0));
+        const markdown = new TextDecoder().decode(bytes);
+        const html = marked.parse(markdown, { gfm: true, breaks: false });
+        document.getElementById("content").innerHTML = DOMPurify.sanitize(html, {
+            USE_PROFILES: { html: true },
+            FORBID_TAGS: ["style", "form", "button", "textarea", "select"],
+            ADD_TAGS: ["input"],
+            ALLOW_DATA_ATTR: false
+        });
+        document.querySelectorAll("input").forEach(input => {
+            if (input.type !== "checkbox") {
+                input.remove();
+            } else {
+                input.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>
