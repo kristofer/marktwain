@@ -21,15 +21,15 @@
 
 /* Begin PBXFileReference section */
 		48CDFE89FB3966CA7E22745A /* MarkdownWebView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkdownWebView.swift; sourceTree = "<group>"; };
-		4B0F6E181C9A81A875E9A0EC /* purify.js */ = {isa = PBXFileReference; includeInIndex = 1; path = purify.js; sourceTree = "<group>"; };
+		4B0F6E181C9A81A875E9A0EC /* purify.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; path = purify.js; sourceTree = "<group>"; };
 		588BCF334CA1B1D2E914A03B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		70E3AEFAE855295C433FB934 /* MarkTwainApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkTwainApp.swift; sourceTree = "<group>"; };
 		8CB88ECE8036CD5712E5DA4E /* MarkTwain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkTwain.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D80DAB1B84F9FC8C792A5F9 /* marked-LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "marked-LICENSE.txt"; sourceTree = "<group>"; };
+		8D80DAB1B84F9FC8C792A5F9 /* marked-LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "marked-LICENSE.txt"; sourceTree = "<group>"; };
 		9E5F712A0BC964F1ECBCBC6C /* MarkdownDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkdownDocument.swift; sourceTree = "<group>"; };
-		A755EBECBF90691A402D891A /* reader.html */ = {isa = PBXFileReference; includeInIndex = 1; path = reader.html; sourceTree = "<group>"; };
-		C7E0EF0E58C3A72C48355548 /* DOMPurify-LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "DOMPurify-LICENSE.txt"; sourceTree = "<group>"; };
-		C9201F3D4B87125BE89E36FE /* marked.js */ = {isa = PBXFileReference; includeInIndex = 1; path = marked.js; sourceTree = "<group>"; };
+		A755EBECBF90691A402D891A /* reader.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; path = reader.html; sourceTree = "<group>"; };
+		C7E0EF0E58C3A72C48355548 /* DOMPurify-LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "DOMPurify-LICENSE.txt"; sourceTree = "<group>"; };
+		C9201F3D4B87125BE89E36FE /* marked.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; path = marked.js; sourceTree = "<group>"; };
 		DF162093B5A6F6E9BAF824A9 /* LibraryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		F869554B594044AE535B4237 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +55,6 @@
 				4B0F6E181C9A81A875E9A0EC /* purify.js */,
 				A755EBECBF90691A402D891A /* reader.html */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -85,7 +84,6 @@
 				F869554B594044AE535B4237 /* Info.plist */,
 				15CF19BC1259F3A63B3D0B49 /* Resources */,
 			);
-			name = MarkTwain;
 			path = MarkTwain;
 			sourceTree = "<group>";
 		};
@@ -134,6 +132,12 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					6678C4C121B199030958176C = {
+						DevelopmentTeam = S7ZKK95T9U;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 26FBA9A6DF3E39CADEE59137 /* Build configuration list for PBXProject "MarkTwain" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -144,7 +148,6 @@
 				Base,
 			);
 			mainGroup = FCEAD4A99BEC249A4C11698C;
-			minimizedProjectReferenceProxies = 0;
 			productRefGroup = 348790C58E670CC3251E1032 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,8 +296,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -305,6 +307,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S7ZKK95T9U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarkTwain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -330,6 +333,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S7ZKK95T9U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarkTwain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
